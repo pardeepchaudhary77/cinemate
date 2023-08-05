@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Card } from '../components'
 import useFetch from '../hooks/useFetch'
-import { useNavigate, useSearchParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 function MovieList({apiPath}) {
   const [count, setCount] = useState(1)
