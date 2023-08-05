@@ -7,8 +7,6 @@ function MovieDetail() {
   const params = useParams()
   const [movie, setMovie] = useState({})
 
-  console.log(movie)
-
   const images = movie.poster_path ? `https://www.themoviedb.org/t/p/w400${movie.poster_path}` : backupImg
 
   useEffect(()=>{
@@ -18,7 +16,7 @@ function MovieDetail() {
       setMovie(result)
     }
     fetchMovie();
-  },[])
+  },[params])
 
   return (
     <section className="bg-white dark:bg-slate-800">
